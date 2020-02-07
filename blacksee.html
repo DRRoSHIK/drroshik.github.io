@@ -1,0 +1,90 @@
+<!DOCTYPE html><!-- Спецификация -->
+<html lang="en"><!-- С открывающего html начинаем наш документ -->
+<head> <!--В head, например, есть тег title, в котором нужно записать заглавие страницы -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Черное море</title> <!-- тег title, отображающий название страницы во вкладке браузера -->
+  <link rel="stylesheet" href="css/mainbs.css">
+ </head><!-- Закрываем головную часть документа. Пока не закрыли, к тегу body НЕ переходим -->
+<body><!-- Открываем тело документа. ЗДЕСЬ будет всё содержимое -->
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Дачный отдых</span>
+    </div>
+    </header>
+
+  <div id="top">
+    <h1><font face="MS Reference Sans Serif" >Привет, курортник, идешь на пляж?</font></h1><!--h1 служит для обозначения заголовка. 
+    Есть ещё h2, h3 и так до h6. самого маленького заголовка-->
+   </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2><font face="MS Reference Sans Serif" >Локация:</font></h2>
+      <span>Мыс Фиолент.</span>
+    </div>
+    <div class="text">
+      <span>
+	  <p><b>Ближайшийй ориентир и автобусная остановка:<b/></p>
+<p> База отдыха "Каравела". </p>
+<p><b>В наличии:<b/></p>
+<p>до 6 спальных мест.</p>
+<p>Свет. Газ балонный. Вода привозная. На участке емкость объемом 6 кубических метров.</p>
+<p>Дачный домик во 2 ряду от моря. Купальный сезон с открытия и до конца сентября. Естественно, наиболее теплое море к середине - концу лета </p>
+	  </span>
+    </div>
+  </div>
+
+   <div id="contacts">
+    <center><h5><font face="MS Reference Sans Serif" >Надумал? Пиши через форму ниже. Мы с тобой свяжемся.</font></h5></center>
+    <form id="form_input">
+      <label for="name"><font face="MS Reference Sans Serif" >Имя </font><span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email"><font face="MS Reference Sans Serif" >Ваша почта </font><span>*</span></label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+			<label for="message"><font face="MS Reference Sans Serif" >Сообщение</font> <span>*</span></label><br>
+			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn"><font face="MS Reference Sans Serif" >Отправить</font></div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Оплата</span><br>
+      <span class="heading">Как будет проходит оплата?</span>
+      <p>Тут некоторое колличество дополнительной информации. Тут некоторое колличество дополнительной информации. Тут некоторое колличество дополнительной информации. Тут некоторое колличество дополнительной информации. Тут некоторое колличество дополнительной информации. </p>
+    
+       </div>
+    <div>
+      <span class="title">Информация</span><br>
+      <span class="heading">Что входит в услуги сервиса</span>
+      <p>Тут некоторое колличество дополнительной информации. Тут некоторое колличество дополнительной информации. Тут некоторое колличество дополнительной информации. Тут некоторое колличество дополнительной информации. Тут некоторое колличество дополнительной информации. </p>
+     
+         </div>
+    <div>
+      <span class="title">Гарантии</span><br>
+      <span class="heading">Какие гарантии есть</span>
+      <p>Тут некоторое колличество дополнительной информации. Тут некоторое колличество дополнительной информации. Тут некоторое колличество дополнительной информации. Тут некоторое колличество дополнительной информации. Тут некоторое колличество дополнительной информации. </p>
+  
+        </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+  &copy; DRRoSHIK copyright &reg; ШАнС :))
+</body><!--Закрываем body. После этого Содержимое не вставляем-->
+</html><!--Закрываем html. После него уже ВООБЩЕ НИЧЕГО НЕ вставляем-->

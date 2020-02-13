@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML5 и CSS3 сайт</title> <!-- тег title, отображающий название страницы во вкладке браузера -->
   <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  </head><!-- Закрываем головную часть документа. Пока не закрыли, к тегу body НЕ переходим -->
 <body><!-- Открываем тело документа. ЗДЕСЬ будет всё содержимое -->
   <header>
@@ -47,7 +48,7 @@
     <h4><font face="MS Reference Sans Serif" >Выбор прост как орел и решка...</font></h4>
 
     <div class="img">
-	<a href="witesee.html"  target="_blank">
+	<a href="witesee.html"  target="_self">
       <img src=wsee.jpg
 	  alt=""><!--непарный тег img-->  
     
@@ -56,7 +57,7 @@
 
     </div>
 	    <div class="img">
-		<a href="blacksee.html" target="_blank">
+		<a href="blacksee.html" target="_self">
       <img src=phiolent.jpg alt="">
       <span><font size="18" color='#fff'>Черное море</font></span></a>
     </div>
@@ -96,7 +97,7 @@
         </div>
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
   <script>
     function slowScroll(id) {
       $('html, body').animate({

@@ -321,6 +321,23 @@ h1, h2, h3, h4, h5 {
   background-color: #c15443;
 }
 
+.btn:active {
+  background-color: #c25443;
+}
+
+
+.error {
+	padding 10px 20px;
+	margin-bottom 5px;
+	background-color: rgba(224,79,54,0.712);
+	border-radius: 8px;
+	color: #fff;
+	font-width: 700;
+	font-size: 14px;
+	font-family: 'MS Reference Sans Serif', serif;
+}
+
+
 /* Вопросы и ответы */
 
 #faq {

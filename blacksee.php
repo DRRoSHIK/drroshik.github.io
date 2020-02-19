@@ -1,3 +1,34 @@
+<?php
+
+if ( !empty($_POST) && trim($_POST['name']) != '' && trim($_POST['email']) != '' && trim($_POST['message']) != ''  ) {
+
+    $message =  "Вам пришло новое сообщение с сайта: \n" .
+                "Имя отправителя: " . $_POST['name'] . "\n" .
+                "Email отправителя: ". $_POST['email'] . "\n" .
+                "Сообщение: ". $_POST['message'];
+
+    mail( 'info@rightblog.ru', "Сообщение с сайта!", $message ); 
+
+    header('location: thankyou.html');
+
+}
+
+
+
+function checkValue($item, $message ) {
+    if ( isset($item) && trim($item) == ''  ) {
+        echo '<div class="error">' . $message . '</div>';
+    } 
+}
+
+function printPostValue($item){
+    if ( isset($item) && strlen(trim($item)) > 0 ) {
+        echo $item;
+    }
+}
+
+?>
+
 <!DOCTYPE html><!-- Спецификация -->
 <html lang="ru"><!-- С открывающего html начинаем наш документ -->
 <head> <!--В head, например, есть тег title, в котором нужно записать заглавие страницы -->
@@ -66,7 +97,7 @@
 		<div class="post">
 
 			
-				<div class="post_title"><h2>Галерея</h2></div>
+				<center><div class="post_title"><h2></h2></div></center>
 <div class="gallery">
 <a rel="gallery" class="photo" href="gallery_img/big/01.jpg" title="Картинка 1"><img src="gallery_img/small/01.jpg" width="150" height="100" alt="" /></a>
 <a rel="gallery" class="photo" href="gallery_img/big/02.jpg" title="Картинка 2"><img src="gallery_img/small/02.jpg" width="150" height="100" alt="" /></a>
@@ -87,23 +118,89 @@
 	</div>
 
 	
-	
+        
+        <CENTER><div class="content-wrapper">
+            <h1 class="title">Надумал? Пиши через форму ниже. Мы с тобой свяжемся.</h1> 
+
+            <form method="POST" action="index.php" class="form-wrapper">
+
+                <?php 
+                    // echo "<pre style='font-size: 24px;'>";
+                    // print_r($_POST);
+                    // echo "</pre>";
+                ?>
+
+                <div class="form-group">
+                    <label for="name" class="form-label">Ваше имя</label>
+                    <?php checkValue($_POST['name'], 'Вы не ввели имя.'); ?>
+                    
+                    <input 
+                        name="name" 
+                        id="name" 
+                        type="text" 
+                        class="form-input" 
+                        placeholder="Введите имя"
+                        value="<?php printPostValue($_POST['name']); ?>"
+                    >
+                
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Ваше email</label>
+                    <?php checkValue($_POST['email'], 'Вы не ввели email.'); ?>
+                    <input 
+                        name="email" 
+                        id="email" 
+                        type="email" 
+                        class="form-input" 
+                        placeholder="Введите email"
+                        value="<?php printPostValue($_POST['email']); ?>"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Сообщение</label>
+                    <?php checkValue($_POST['message'], 'Вы не ввели сообщение.'); ?>
+                    <textarea name="message" id="message" placeholder="Напишите пару строк" class="form-message" name="" id="" cols="30" rows="10"><?php printPostValue($_POST['message']); ?></textarea>
+                </div>
+
+                <input class="form-submit" type="submit" value="Отправить сообщение">
+                
+            </form>
+            
+        
+
+    </div>
+</CENTER>
+
+
+
+
+	<!--
 		
    <div id="contacts">
     <center><h5><font face="MS Reference Sans Serif" >Надумал? Пиши через форму ниже. Мы с тобой свяжемся.</font></h5></center>
+
+
     <form id="form_input">
       <label for="name"><font face="MS Reference Sans Serif" >Имя </font><span>*</span></label><br>
 	  <div class="error">Вы не ввели имя.</div>
       <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+
+
       <label for="email"><font face="MS Reference Sans Serif" >Ваша почта </font><span>*</span></label><br>
 	  <div class="error">Вы не ввели Email.</div>
 			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+
+
 			<label for="message"><font face="MS Reference Sans Serif" >Сообщение</font> <span>*</span></label><br>
 			<div class="error">Введите сообщение.</div>
 			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
 			<div id="mess_send" class="btn"><font face="MS Reference Sans Serif" >Отправить</font></div>
     </form>
   </div>
+
+-->
 
   <div id="faq">
     <div>

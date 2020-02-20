@@ -1,5 +1,10 @@
-<?php
 
+
+
+<!DOCTYPE php><!-- Спецификация -->
+<html lang="ru"><!-- С открывающего html начинаем наш документ -->
+<?php
+//header('location: thankyou.html');
 if ( !empty($_POST) && trim($_POST['name']) != '' && trim($_POST['email']) != '' && trim($_POST['message']) != ''  ) {
 
     $message =  "Вам пришло новое сообщение с сайта: \n" .
@@ -7,9 +12,9 @@ if ( !empty($_POST) && trim($_POST['name']) != '' && trim($_POST['email']) != ''
                 "Email отправителя: ". $_POST['email'] . "\n" .
                 "Сообщение: ". $_POST['message'];
 
-    mail( 'info@rightblog.ru', "Сообщение с сайта!", $message ); 
+    mail( 'DRRoSHIK@yandex.ru', "Сообщение с сайта!", $message ); 
 
-    header('location: thankyou.html');
+    
 
 }
 
@@ -28,9 +33,6 @@ function printPostValue($item){
 }
 
 ?>
-
-<!DOCTYPE html><!-- Спецификация -->
-<html lang="ru"><!-- С открывающего html начинаем наш документ -->
 <head> <!--В head, например, есть тег title, в котором нужно записать заглавие страницы -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,7 +124,7 @@ function printPostValue($item){
         <CENTER><div class="content-wrapper">
             <h1 class="title">Надумал? Пиши через форму ниже. Мы с тобой свяжемся.</h1> 
 
-            <form method="POST" action="index.php" class="form-wrapper">
+            <form method="POST" action="blacksee.php" class="form-wrapper">
 
                 <?php 
                     // echo "<pre style='font-size: 24px;'>";

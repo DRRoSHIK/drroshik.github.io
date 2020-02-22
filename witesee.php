@@ -23,14 +23,14 @@ function printPostValue($item){
 }
 
 ?>
-<!DOCTYPE php><!-- Спецификация -->
-<html lang="ru"><!-- С открывающего html начинаем наш документ -->
+<!DOCTYPE html><!-- Спецификация -->
+<html lang="en"><!-- С открывающего html начинаем наш документ -->
 <head> <!--В head, например, есть тег title, в котором нужно записать заглавие страницы -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Черное море</title> <!-- тег title, отображающий название страницы во вкладке браузера -->
-  <link rel="stylesheet" href="css/mainbs.css">
+  <title>Белое море</title> <!-- тег title, отображающий название страницы во вкладке браузера -->
+  <link rel="stylesheet" href="css/mainvs.css">
   <link rel="stylesheet" type="text/css" href="reset.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="ie_fixes.css" media="screen" /><![endif]-->
@@ -55,37 +55,42 @@ function printPostValue($item){
 		});
 	});
 </script>
-
+ 
+ 
  </head><!-- Закрываем головную часть документа. Пока не закрыли, к тегу body НЕ переходим -->
 <body><!-- Открываем тело документа. ЗДЕСЬ будет всё содержимое -->
   <header>
     <div id="logo" onclick="slowScroll('#top')">
-       <a href="index.html" target="_self"><span>На главную</span></a>
+      <a href="index.html" target="_self"><span>Назад</span></a>
     </div>
     </header>
 
   <div id="top">
-    <h1><font face="MS Reference Sans Serif" >Привет, курортник, идешь на пляж?</font></h1><!--h1 служит для обозначения заголовка. 
+    <h1><font face="MS Reference Sans Serif" >Приветствую тебя, человече на Белом море!</font></h1><!--h1 служит для обозначения заголовка. 
     Есть ещё h2, h3 и так до h6. самого маленького заголовка-->
    </div>
 
   <div id="main">
     <div class="intro">
-      <h2><font face="MS Reference Sans Serif" >Локация:</font></h2>
-      <span>Мыс Фиолент.</span>
+      <h2><font face="MS Reference Sans Serif" >Место отдыха:</font></h2>
+      <span>Онежский район, дачное товарищество Лесопильщик.</span>
     </div>
     <div class="text">
       <span>
 	  <p><b>Ближайшийй ориентир и автобусная остановка:<b/></p>
-<p> База отдыха "Каравела". </p>
-<p><b>В наличии:<b/></p>
-<p>до 6 спальных мест.</p>
-<p>Свет. Газ балонный. Вода привозная. На участке емкость объемом 6 кубических метров.</p>
-<p>Дачный домик во 2 ряду от моря. Купальный сезон с открытия и до конца сентября. Естественно, наиболее теплое море к середине - концу лета </p>
+<p> Дом отдыха "Кий остров". </p>
+<p>Местные достопримечательности:</p>
+<p>Остров большая Вертягина Луда.</p>
+<p>Условия:</p>
+<p></p>
+<p> Доступно до 17 спальных мест. Во дворе баня. В домике камин, дровяная печь, газ балонный, вода скваженная пресная. </p>
+<p>Дача в 1 ряду. </p>
+<p>Во время прилива расстояние до воды 20 метров.</p>
+<p> Купальный сезон с июля по август, при наличии солнца. </p>
 	  </span>
     </div>
   </div>
-<b><b><b>
+  <b><b><b>
   </b></b></b>
 		
 		<div class="post">
@@ -110,10 +115,8 @@ function printPostValue($item){
 <a rel="gallery" class="photo" href="gallery_img/big/15.jpg" title="Картинка 15"><img src="gallery_img/small/15.jpg" width="150" height="100" alt="" /></a>
 </div>
 	</div>
-
-	
-        
-        <CENTER><div class="content-wrapper">
+  
+          <CENTER><div class="content-wrapper">
             <h1 class="title">Надумал? Пиши через форму ниже. Мы с тобой свяжемся.</h1> 
 
             <form method="POST" action="blacksee.php" class="form-wrapper">
@@ -166,36 +169,20 @@ function printPostValue($item){
 
     </div>
 </CENTER>
-
-
-
-
-	<!--
-		
-   <div id="contacts">
-    <center><h5><font face="MS Reference Sans Serif" >Надумал? Пиши через форму ниже. Мы с тобой свяжемся.</font></h5></center>
-
-
+<!--
+      <div id="contacts">
+    <center><h5><font face="MS Reference Sans Serif" >Надумал? Пиши через форму ниже.</font></h5></center>
     <form id="form_input">
       <label for="name"><font face="MS Reference Sans Serif" >Имя </font><span>*</span></label><br>
-	  <div class="error">Вы не ввели имя.</div>
       <input type="text" placeholder="Введите имя" name="name" id="name"><br>
-
-
       <label for="email"><font face="MS Reference Sans Serif" >Ваша почта </font><span>*</span></label><br>
-	  <div class="error">Вы не ввели Email.</div>
 			<input type="email" placeholder="Введите email" name="email" id="email"><br>
-
-
 			<label for="message"><font face="MS Reference Sans Serif" >Сообщение</font> <span>*</span></label><br>
-			<div class="error">Введите сообщение.</div>
 			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
 			<div id="mess_send" class="btn"><font face="MS Reference Sans Serif" >Отправить</font></div>
     </form>
   </div>
-
 -->
-
   <div id="faq">
     <div>
       <span class="title">Оплата</span><br>
@@ -217,10 +204,8 @@ function printPostValue($item){
         </div>
   </div>
 
- <!-- 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-  <script>
-  
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>-->
     function slowScroll(id) {
       $('html, body').animate({
         scrollTop: $(id).offset().top

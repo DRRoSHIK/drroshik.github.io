@@ -7,22 +7,14 @@ if ( !empty($_POST) && trim($_POST['name']) != '' && trim($_POST['email']) != ''
                 "Email отправителя: ". $_POST['email'] . "\n" .
                 "Сообщение: ". $_POST['message'];
 mail( 'DRRoSHIK@yandex.ru', "Сообщение с сайта!", $message );
+//$file=file_get_contents('thankyou.html');
+//echo $file;
 header('location: thankyou.html'); 
-}
-
-function checkValue($item, $message ) {
-    if ( isset($item) && trim($item) == ''  ) {
-        echo '<div class="error">' . $message . '</div>';
-    } 
-}
-
-function printPostValue($item){
-    if ( isset($item) && strlen(trim($item)) > 0 ) {
-        echo $item;
-    }
-}
-
-?>
+}else{
+	
+	?>
+	
+	
 <!DOCTYPE php><!-- Спецификация -->
 <html lang="ru"><!-- С открывающего html начинаем наш документ -->
 <head> <!--В head, например, есть тег title, в котором нужно записать заглавие страницы -->
@@ -237,3 +229,26 @@ function printPostValue($item){
   &copy; DRRoSHIK copyright &reg; ШАнС :))
 </body><!--Закрываем body. После этого Содержимое не вставляем-->
 </html><!--Закрываем html. После него уже ВООБЩЕ НИЧЕГО НЕ вставляем-->
+
+	
+<?
+	
+	
+}
+
+?>
+
+<?php
+
+function checkValue($item, $message ) {
+    if ( isset($item) && trim($item) == ''  ) {
+        echo '<div class="error">' . $message . '</div>';
+    } 
+}
+
+function printPostValue($item){
+    if ( isset($item) && strlen(trim($item)) > 0 ) {
+        echo $item;
+    }
+}
+?>

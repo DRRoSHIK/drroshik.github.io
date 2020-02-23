@@ -61,7 +61,7 @@ function printPostValue($item){
 <body><!-- Открываем тело документа. ЗДЕСЬ будет всё содержимое -->
   <header>
     <div id="logo" onclick="slowScroll('#top')">
-      <a href="index.html" target="_self"><span>Назад</span></a>
+      <a href="index.html" target="_self"><span>На главную</span></a>
     </div>
     </header>
 
